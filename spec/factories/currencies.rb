@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :currency do
-    name { "MyString" }
-    rate { 22 }
+    name { "USD" }
+    rate { 75 }
     multiplicity { 1 }
   end
 end
