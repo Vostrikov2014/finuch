@@ -1,0 +1,9 @@
+= form_with model: wallet do |f|
+  p
+    = f.label :name
+    = f.text_field :name
+  p
+    = f.label :currency
+    = f.text_field :currency_id
+
+  p= f.submit 'Create'

@@ -1,0 +1,12 @@
+= form_with model: currency do |f|
+  p
+    = f.label :name
+    = f.text_field :name
+  p
+    = f.label :rate
+    = f.text_field :rate
+  p
+    = f.label :multiplicity
+    = f.text_field :multiplicity
+
+  p= f.submit 'Create'
