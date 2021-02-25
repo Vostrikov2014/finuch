@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'wallets#index'
   resources :currencies
   resources :wallets
+  resources :cash_flows
 end

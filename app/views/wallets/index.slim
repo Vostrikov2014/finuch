@@ -1,5 +1,7 @@
-- wallets.each do |wallet|
+- @wallets.each do |wallet|
   p= link_to wallet.name, wallet
 
+p= link_to 'All cash flow', cash_flows_path
+p
 p= link_to 'New wallet', new_wallet_path
 p= link_to 'Currencies', currencies_path

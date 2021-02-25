@@ -3,5 +3,9 @@ FactoryBot.define do
     name { "USD" }
     rate { 75 }
     multiplicity { 1 }
+
+    trait :invalid do
+      name { nil }
+    end
   end
 end

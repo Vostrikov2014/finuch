@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_18_192551) do
+ActiveRecord::Schema.define(version: 2021_02_22_084043) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cash_flows", force: :cascade do |t|
+    t.string "transact_type"
+    t.bigint "wallet_id"
+    t.datetime "transact_at"
+    t.decimal "cash", precision: 15, scale: 2
+    t.text "comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["wallet_id"], name: "index_cash_flows_on_wallet_id"
+  end
 
   create_table "currencies", force: :cascade do |t|
     t.string "name"
@@ -39,6 +50,7 @@ ActiveRecord::Schema.define(version: 2021_02_18_192551) do
     t.index ["currency_id"], name: "index_wallets_on_currency_id"
   end
 
+  add_foreign_key "cash_flows", "wallets"
   add_foreign_key "invoices", "currencies"
   add_foreign_key "wallets", "currencies"
 end

@@ -1,6 +1,10 @@
 FactoryBot.define do
   factory :wallet do
-    name { "MyString" }
-    currency_id { 1 }
+    name { "main" }
+    currency
+
+    trait :invalid do
+      name { nil }
+    end
   end
 end
