@@ -1,1 +1,28 @@
-h1= cash_flows.name
+h4.mb-4.mt-4.text-left
+  | Cash flow
+
+p
+  strong
+    | Transact type:
+    = @cash_flow.transact_type
+p
+  strong
+    | Wallet:
+    = @cash_flow.wallet.name
+p
+  strong
+    | Date:
+    = @cash_flow.transact_at
+p
+  strong
+    | Cash:
+    = @cash_flow.cash
+p
+  strong
+    | Comment:
+    = @cash_flow.comment
+
+= link_to 'Edit', edit_cash_flow_path(@cash_flow)
+|  |
+= link_to ' Back', cash_flows_path
+

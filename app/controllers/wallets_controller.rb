@@ -37,6 +37,19 @@ class WalletsController < ApplicationController
   # end
   #end
 
+  def update
+    if @wallet.update(wallet_params)
+      redirect_to @wallet
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @wallet.destroy
+    redirect_to wallets_path
+  end
+
   private
 
   def load_wallet

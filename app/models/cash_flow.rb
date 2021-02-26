@@ -1,6 +1,6 @@
 class CashFlow < ApplicationRecord
   belongs_to :wallet
-  validates :transact_type, :wallet_id, presence: true
+  validates :transact_type, :wallet_id, :transact_at, presence: true
 
   TRANSACT = ["profit", "cost"]
 

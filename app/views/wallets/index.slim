@@ -1,7 +1,19 @@
-- @wallets.each do |wallet|
-  p= link_to wallet.name, wallet
+h4.mb-4.mt-4.text-left
+  p= link_to 'Finuch.com', cash_flows_path
 
-p= link_to 'All cash flow', cash_flows_path
-p
+h3.mb-4.mt-4.text-center
+  | Wallets
+
 p= link_to 'New wallet', new_wallet_path
+
+table.table
+  tr
+    th Wallet
+    th Currency
+    th[colspan='3']
+      | Actions
+
+  = render @wallets
+
+p= link_to 'Cash flow', cash_flows_path
 p= link_to 'Currencies', currencies_path

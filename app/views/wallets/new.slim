@@ -1,9 +1,5 @@
-= form_with model: @wallet do |f|
-  p
-    = f.label :name
-    = f.text_field :name
-  p
-    = f.label :currency
-    = f.text_field :currency_id
+h4.mb-4.mt-4.text-left
+  | Create new Wallet
 
-  p= f.submit 'Create'
+= render 'form'
+= link_to 'Back', wallets_path

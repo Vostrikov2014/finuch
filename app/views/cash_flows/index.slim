@@ -1,4 +1,21 @@
-- cash_flows.each do |cash_flow|
-  p= link_to cash_flow.transact_type, cash_flow
+h4.mb-4.mt-4.text-left
+  p= link_to 'Finuch.com', cash_flows_path
+
+h3.mb-4.mt-4.text-center
+  | Cash flows
+
+table.table
+  tr
+    th Transact type
+    th Wallet
+    th Date
+    th Cash
+    th Comment
+    th[colspan='3']
+      | Actions
+
+  = render @cash_flows
 
 p= link_to 'New cash flow', new_cash_flow_path
+p= link_to 'Wallets', wallets_path
+p= link_to 'Currencies', currencies_path
