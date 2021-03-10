@@ -58,6 +58,6 @@ class CurrenciesController < ApplicationController
   end
 
   def currency_params
-    params.require(:currency).permit(:name, :rate, :multiplicity)
+    params.require(:currency).permit(:name, :code)
   end
 end

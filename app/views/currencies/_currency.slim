@@ -1,7 +1,6 @@
 tr
   td= link_to currency.name
-  td= currency.rate
-  td= currency.multiplicity
+  td= currency.code
   td= link_to 'Show', currency_path(currency)
   td= link_to 'Edit', edit_currency_path(currency)
   td= link_to 'Delete', currency_path(currency), method: :delete, data: { confirm: 'Are you sure?' }

@@ -9,5 +9,16 @@ html
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+
   body
+    - if user_signed_in?
+      p.nav.user
+        | Welcome,&nbsp
+        b
+          = current_user.email
+        | &nbsp
+        = link_to 'Signout', destroy_user_session_path, method: :delete
+
+    = render 'shared/flash'
+
     = yield

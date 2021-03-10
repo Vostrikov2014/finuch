@@ -34,6 +34,8 @@ gem 'decent_exposure', '~> 3.0'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.0.0.beta1'
 
+gem 'devise', '~> 4.7', '>= 4.7.3'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -50,6 +52,7 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'letter_opener' # Opens emails in new tab for easier testing
 end
 
 group :test do

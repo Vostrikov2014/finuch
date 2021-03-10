@@ -3,6 +3,7 @@ class CashFlowsController < ApplicationController
   #expose :cash_flows, ->{ CashFlow.all }
   #expose :cash_flow
 
+  before_action :authenticate_user!
   before_action :load_cash_flow, only: [:show, :edit, :update, :destroy]
 
   def index

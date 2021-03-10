@@ -7,12 +7,8 @@ p
     = @currency.name
 p
   strong
-    | Rate:
-    = @currency.rate
-p
-  strong
-    | Multiplicity
-    = @currency.multiplicity
+    | Code:
+    = @currency.code
 
 = link_to 'Edit', edit_currency_path(@currency)
 |  |
