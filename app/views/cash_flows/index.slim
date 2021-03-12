@@ -1,8 +1,7 @@
-h4.mb-4.mt-4.text-left
-  p= link_to 'Finuch.com', cash_flows_path
-
 h3.mb-4.mt-4.text-center
-  | Cash flows
+  = t('.header')
+
+p= link_to 'New cash flow', new_cash_flow_path
 
 table.table
   tr
@@ -16,6 +15,5 @@ table.table
 
   = render @cash_flows
 
-p= link_to 'New cash flow', new_cash_flow_path
 p= link_to 'Wallets', wallets_path
 p= link_to 'Currencies', currencies_path

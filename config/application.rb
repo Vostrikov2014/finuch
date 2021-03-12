@@ -27,5 +27,7 @@ module Finuch
                         request_specs: false,
                         controller_specs: true
     end
+
+    config.i18n.default_locale = :ru
   end
 end

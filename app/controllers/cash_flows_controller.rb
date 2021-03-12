@@ -24,7 +24,7 @@ class CashFlowsController < ApplicationController
     @cash_flow = CashFlow.new(cash_flow_params)
 
     if @cash_flow.save
-      redirect_to @cash_flow
+      redirect_to @cash_flow, notice: t('.success')
     else
       render :new
     end

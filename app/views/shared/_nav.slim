@@ -1,0 +1,15 @@
+nav.navbar.navbar-light.bg-light
+  = link_to 'Finuch', root_path, class: 'navbar-brand'
+
+  span.navbar-text
+    - if user_signed_in?
+      p.nav.user
+        | Welcome,&nbsp
+        b
+          = current_user.email
+        | &nbsp
+        = link_to 'Sign out', destroy_user_session_path, method: :delete
+    - else
+      = link_to 'Sign in', new_session_path(resource_name)
+      | &nbsp
+      = link_to 'Sign up', new_registration_path(resource_name)
