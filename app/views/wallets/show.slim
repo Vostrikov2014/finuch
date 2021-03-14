@@ -1,15 +1,16 @@
-h4.mb-4.mt-4.text-left
-  | Wallet
+.m-4
+  h4.mb-4.mt-4.text-left
+    | Wallet
 
-p
-  strong
-    | Wallet:
-    = @wallet.name
-p
-  strong
-    | Currency:
-    = @wallet.currency.name
+  p
+    strong
+      | Wallet:&nbsp
+      = @wallet.name
+  p
+    strong
+      | Currency:&nbsp
+      = @wallet.currency.name
 
-= link_to 'Edit', edit_wallet_path(@wallet)
-|  |
-= link_to ' Back', wallets_path
+  = link_to 'Edit', edit_wallet_path(@wallet)
+  |  |
+  = link_to ' Back', wallets_path

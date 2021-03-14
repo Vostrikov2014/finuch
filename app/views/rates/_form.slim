@@ -1,0 +1,17 @@
+= form_with model: @rate do |f|
+  = render 'shared/errors', resource: @rate
+
+  p
+    = f.label :period
+    = f.datetime_field :period
+  p
+    = f.label :currency
+    = f.collection_select :currency_id, Currency.all, :id, :name, prompt: true
+  p
+    = f.label :rate
+    = f.text_field :rate
+  p
+    = f.label :multiplicity
+    = f.text_field :multiplicity
+
+  p= f.submit

@@ -1,17 +1,20 @@
 .m-4
   h3.mb-4.mt-4.text-center
-    | Wallets
+    | Rates
 
-  p= link_to 'New wallet', new_wallet_path
+  p= link_to 'New rate', new_rate_path
 
   table.table.table-striped.table-bordered.table-hover.text-center
     tr
-      th Wallet
+      th Period
       th Currency
+      th Rate
+      th Multiplicity
       th[colspan='3']
         | Actions
 
-    = render @wallets
+    = render @rates
 
   p= link_to 'Cash flow', cash_flows_path
+  p= link_to 'Wallet', wallets_path
   p= link_to 'Currencies', currencies_path

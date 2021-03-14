@@ -11,7 +11,7 @@ ru:
         transaction: "Операция"
         wallet: "Кошелек"
         transact_at: "Дата операции"
-        cash: "Валюта"
+        cash: "Сумма"
         comment: "Комментарий"
 
   shared:
