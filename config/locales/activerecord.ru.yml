@@ -1,0 +1,12 @@
+ru:
+  activerecord:
+    models:
+      cash_flow: "Денежный поток"
+
+    attributes:
+      cash_flow:
+        transact_type: "Операция"
+
+    errors:
+      messages:
+        blank: "не может быть пустым"

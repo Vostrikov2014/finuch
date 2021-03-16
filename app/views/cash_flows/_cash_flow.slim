@@ -1,0 +1,9 @@
+tr
+  td= cash_flow.transact_type
+  td= cash_flow.wallet.name
+  td= cash_flow.transact_at
+  td= cash_flow.cash
+  td= cash_flow.comment
+  td= link_to 'Show', cash_flow_path(cash_flow)
+  td= link_to 'Edit', edit_cash_flow_path(cash_flow)
+  td= link_to 'Delete', cash_flow_path(cash_flow), method: :delete, data: { confirm: 'Are you sure?' }

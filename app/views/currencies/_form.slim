@@ -1,0 +1,10 @@
+= form_with model: @currency do |f|
+  = render 'shared/errors', resource: @currency
+  p
+    = f.label :name
+    = f.text_field :name
+  p
+    = f.label :code
+    = f.text_field :code
+
+  p= f.submit

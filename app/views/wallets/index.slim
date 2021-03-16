@@ -1,0 +1,17 @@
+.m-4
+  h3.mb-4.mt-4.text-center
+    | Wallets
+
+  p= link_to 'New wallet', new_wallet_path
+
+  table.table.table-striped.table-bordered.table-hover.text-center
+    tr
+      th Wallet
+      th Currency
+      th[colspan='3']
+        | Actions
+
+    = render @wallets
+
+  p= link_to 'Cash flow', cash_flows_path
+  p= link_to 'Currencies', currencies_path

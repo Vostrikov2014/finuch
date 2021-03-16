@@ -1,7 +1,10 @@
 FactoryBot.define do
   factory :currency do
-    name { "MyString" }
-    rate { 22 }
-    multiplicity { 1 }
+    name { "USD" }
+    code { 840 }
+    trait :invalid do
+      name { nil }
+      code { nil }
+    end
   end
 end

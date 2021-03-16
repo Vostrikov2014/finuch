@@ -1,0 +1,11 @@
+= form_with model: @wallet do |f|
+  = render 'shared/errors', resource: @wallet
+
+  p
+    = f.label :name
+    = f.text_field :name
+  p
+    = f.label :currency
+    = f.collection_select :currency_id, Currency.all, :id, :name, prompt: true
+
+  p= f.submit

@@ -1,0 +1,6 @@
+tr
+  td= wallet.name
+  td= wallet.currency.name
+  td= link_to 'Show', wallet_path(wallet)
+  td= link_to 'Edit', edit_wallet_path(wallet)
+  td= link_to 'Delete', wallet_path(wallet), method: :delete, data: { confirm: 'Are you sure?' }

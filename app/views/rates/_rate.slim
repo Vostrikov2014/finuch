@@ -1,0 +1,8 @@
+tr
+  td= rate.period
+  td= rate.currency.name
+  td= rate.rate
+  td= rate.multiplicity
+  td= link_to 'Show', rate_path(rate)
+  td= link_to 'Edit', edit_rate_path(rate)
+  td= link_to 'Delete', rate_path(rate), method: :delete, data: { confirm: 'Are you sure?' }

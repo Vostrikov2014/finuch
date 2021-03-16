@@ -1,0 +1,12 @@
+en:
+  activerecord:
+    models:
+      cash_flow: "Cash Flow"
+
+    attributes:
+      cash_flow:
+        transact_type: "Transaction"
+
+    errors:
+      messages:
+        blank: "can't be blank"

@@ -1,0 +1,21 @@
+.m-4
+  h3.mb-4.mt-4.text-center
+    = t('.header')
+
+  p= link_to 'New cash flow', new_cash_flow_path
+
+  table.table.table-striped.table-bordered.table-hover.text-center
+    tr
+      th Transact type
+      th Wallet
+      th Date
+      th Cash
+      th Comment
+      th[colspan='3']
+        | Actions
+
+    = render @cash_flows
+
+  p= link_to 'Wallets', wallets_path
+  p= link_to 'Currencies', currencies_path
+  p= link_to 'Rate', rates_path
